@@ -23,7 +23,7 @@ var (
 // @host golang-vercel.vercel.app
 func init() {
 	app = gin.New()
-	app.GET("/doc/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
+	app.GET("/doc/index.html", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	app.GET("/ping", Ping)
 	app.GET("/hello/:name", Hello)
 }
